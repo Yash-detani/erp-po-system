@@ -70,7 +70,6 @@ protobuf==4.21.12
 psycopg2-binary==2.9.11
 pyarrow==14.0.1
 pyasn1==0.6.3
-PyAudio==0.2.14
 pydantic==2.12.5
 pydantic_core==2.41.5
 pydeck==0.8.1b0

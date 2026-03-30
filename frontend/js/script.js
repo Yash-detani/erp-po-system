@@ -3,7 +3,8 @@
 // ============================================================
 
 // This checks if you are running locally or on the live server
-const API_URL = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost" ? "http://127.0.0.1:8000": "/api";
+const API_URL = "/api"
+
 
 // --- Authentication ---
 

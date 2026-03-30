@@ -1,9 +1,9 @@
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Body, HTTPException
-from api.database import engine
-import api.models as models
+from .database import engine
+from . import models
 
-from api.routes import vendor, product, purchase_order
+from .routes import vendor, product, purchase_order
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()

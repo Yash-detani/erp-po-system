@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = "postgresql://postgres:Yash_postgre@localhost/erp_po_system"
+DATABASE_URL = os.getenv("DATABASE_URL") 
 
 engine = create_engine(DATABASE_URL)
 

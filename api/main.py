@@ -1,9 +1,9 @@
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Body, HTTPException
-from database import engine
-import models
+from api.database import engine
+import api.models as models
 
-from routes import vendor, product, purchase_order
+from api.routes import vendor, product, purchase_order
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
@@ -24,7 +24,7 @@ app.include_router(purchase_order.router)
 def read_root():
     return {"message": "ERP PO System Running"}
 
-from auth import create_access_token
+from api.auth import create_access_token
 
 # Hardcoded credentials for demo
 VALID_USERNAME = "admin"

@@ -1,9 +1,18 @@
-fastapi
-uvicorn
-python-jose
-passlib
-python-multipart
-sqlalchemy
-pydantic
-python-dotenv
+# fastapi
+# uvicorn
+# python-jose
+# passlib
+# python-multipart
+# sqlalchemy
+# pydantic
+# python-dotenv
 psycopg2-binary
+fastapi==0.110.0
+uvicorn==0.29.0
+python-jose==3.3.0
+passlib==1.7.4
+python-multipart==0.0.9
+sqlalchemy==2.0.29
+pydantic==2.6.4
+python-dotenv==1.0.1
+psycopg2-binary==2.9.9

@@ -1,0 +1,527 @@
+/* ============================================================
+   ERP PO System - Premium Stylesheet
+   ============================================================ */
+
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --primary-light: rgba(99, 102, 241, 0.1);
+    --success: #10b981;
+    --success-bg: rgba(16, 185, 129, 0.12);
+    --danger: #ef4444;
+    --danger-bg: rgba(239, 68, 68, 0.12);
+    --warning: #f59e0b;
+    --warning-bg: rgba(245, 158, 11, 0.12);
+    --info: #06b6d4;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-secondary: #64748b;
+    --nav-bg: #0f172a;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --transition: all 0.2s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Login Page --- */
+
+.login-body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 40px 36px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-logo {
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.login-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.login-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.login-footer p {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    margin: 0;
+}
+
+/* --- Nav --- */
+
+.main-nav {
+    background: var(--nav-bg) !important;
+    padding: 12px 24px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand-text {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-nav {
+    background: transparent;
+    color: #94a3b8 !important;
+    border: 1px solid transparent;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 8px;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-nav:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff !important;
+}
+
+.btn-nav.active {
+    background: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc !important;
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.btn-logout {
+    background: rgba(239, 68, 68, 0.1);
+    color: #fca5a5 !important;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 8px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.btn-logout:hover {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fecaca !important;
+}
+
+/* --- Page Header --- */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.page-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.page-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* --- Buttons --- */
+
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    font-weight: 600;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-create {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+}
+
+.btn-secondary {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-danger {
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.82rem;
+    padding: 4px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-info {
+    background: var(--info);
+    border-color: var(--info);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-info:hover {
+    opacity: 0.9;
+    color: #fff;
+}
+
+/* --- Form --- */
+
+.form-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text);
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-control {
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.form-select {
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+/* --- Products Section --- */
+
+.products-section {
+    background: #f1f5f9;
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+}
+
+.products-section .table {
+    background: var(--surface);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.products-section .table thead {
+    background: #e2e8f0;
+}
+
+.products-section .table thead th {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    border: none;
+    padding: 10px 12px;
+}
+
+.products-section .table tbody td {
+    vertical-align: middle;
+    padding: 10px 12px;
+    border-color: var(--border);
+}
+
+.product-row {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Total Section --- */
+
+.total-section {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    border: 1px solid var(--border);
+    margin-top: 20px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.total-final {
+    border-top: 2px solid var(--border);
+    margin-top: 8px;
+    padding-top: 12px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* --- Dashboard Table --- */
+
+.table-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.table-card .table {
+    margin-bottom: 0;
+}
+
+.table-card .table thead {
+    background: #f8fafc;
+}
+
+.table-card .table thead th {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--border);
+    padding: 14px 16px;
+}
+
+.table-card .table tbody td {
+    padding: 14px 16px;
+    vertical-align: middle;
+    border-color: var(--border);
+    font-size: 0.9rem;
+}
+
+.table-card .table tbody tr {
+    transition: var(--transition);
+}
+
+.table-card .table tbody tr:hover {
+    background: var(--primary-light);
+}
+
+/* --- Status Select --- */
+
+.status-select {
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 20px;
+    max-width: 130px;
+    cursor: pointer;
+}
+
+.status-pending {
+    background: var(--warning-bg);
+    color: #b45309;
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.status-approved {
+    background: var(--success-bg);
+    color: #047857;
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.status-rejected {
+    background: var(--danger-bg);
+    color: #b91c1c;
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* --- Empty State --- */
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--surface);
+    border-radius: var(--radius);
+    border: 2px dashed var(--border);
+}
+
+.empty-state h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.empty-state p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+/* --- Alert --- */
+
+.alert-info {
+    background: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    color: #0e7490;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .btn-nav, .btn-logout {
+        font-size: 0.78rem;
+        padding: 5px 10px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .login-card {
+        padding: 28px 24px;
+    }
+}
